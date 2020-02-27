@@ -3,13 +3,13 @@ package controllers
 type IndexController struct {
 	BaseController
 }
-// @router /index [get]
+// @router / [get]
 func (this *IndexController) Index() {
 	this.TplName="index.html"
 }
-// @router /about [get]
-func (this *IndexController) IndexAbout() {
-	this.TplName="about.html"
+// @router /follow [get]
+func (this *IndexController) IndexFollow() {
+	this.TplName="follow.html"
 }
 // @router /message [get]
 func (this *IndexController) IndexMessage() {
@@ -22,4 +22,8 @@ func (this *IndexController) IndexDetails(){
 //@router /comment [get]
 func (this *IndexController) IndexComment(){
 	this.TplName="comment.html"
+}
+//@router /info [get]
+func (this *IndexController) IndexInfo(){
+	this.TplName="info.html"
 }

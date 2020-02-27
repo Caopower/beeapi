@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{template "comm/link.html"}}
+</head>
+<body class="lay-blog">
+{{template "comm/header.html" .}}
+<div class="container-wrap">
+    <div class="container container-message container-details container-about">
+        <div class="contar-wrap">
+            <div class="item">
+
+            </div>
+        </div>
+    </div>
+</div>
+{{template "comm/footer.html" .}}
+<script src="../static/layui/layui.js">
+
+</script>
+<script>
+    layui.config({
+        base: '../static/js/'
+    }).use('blog');
+</script>
+</body>
+</html>

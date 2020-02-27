@@ -9,8 +9,8 @@ func init() {
 
     beego.GlobalControllerRouter["github.com/jicg/liteblog/controllers:IndexController"] = append(beego.GlobalControllerRouter["github.com/jicg/liteblog/controllers:IndexController"],
         beego.ControllerComments{
-            Method: "IndexAbout",
-            Router: `/about`,
+            Method: "Index",
+            Router: `/`,
             AllowHTTPMethods: []string{"get"},
             MethodParams: param.Make(),
             Filters: nil,
@@ -36,8 +36,17 @@ func init() {
 
     beego.GlobalControllerRouter["github.com/jicg/liteblog/controllers:IndexController"] = append(beego.GlobalControllerRouter["github.com/jicg/liteblog/controllers:IndexController"],
         beego.ControllerComments{
-            Method: "Index",
-            Router: `/index`,
+            Method: "IndexFollow",
+            Router: `/follow`,
+            AllowHTTPMethods: []string{"get"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["github.com/jicg/liteblog/controllers:IndexController"] = append(beego.GlobalControllerRouter["github.com/jicg/liteblog/controllers:IndexController"],
+        beego.ControllerComments{
+            Method: "IndexInfo",
+            Router: `/info`,
             AllowHTTPMethods: []string{"get"},
             MethodParams: param.Make(),
             Filters: nil,
